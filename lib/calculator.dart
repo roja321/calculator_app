@@ -9,10 +9,17 @@ class Calculator {
     // return int.parse(numbers);
 
     ///setp1.3 Input:"1,2", Output:1+2=3
-    if (numbers.contains(',')) {
-      List<String> parts = numbers.split(',');
+    // if (numbers.contains(',')) {
+    //   List<String> parts = numbers.split(',');
+    //   return parts.map(int.parse).reduce((a, b) => a + b);
+    // }
+    // return 0;
+
+    ///handle new lines between numbers
+      String newNo = numbers.replaceAll('\n', ',');
+      List<String> parts = newNo.split(',');
       return parts.map(int.parse).reduce((a, b) => a + b);
-    }
-    return 0;
+
+
   }
 }

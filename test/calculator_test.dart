@@ -15,8 +15,13 @@ void main(){
     // });
 
     ///setp1.3 Input:"1,2", Output:1+2=3
-    test('returns sum of two numbers', () {
-        expect(Calculator.add("1,2"), 3);
-      });
+    // test('returns sum of two numbers', () {
+    //     expect(Calculator.add("1,2"), 3);
+    //   });
+
+    ///handle new lines between numbers
+    test('handle new lines between numbers', () {
+      expect(Calculator.add("1\n2,3"), 6);
+    });
   });
 }
