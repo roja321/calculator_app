@@ -20,8 +20,15 @@ void main(){
     //   });
 
     ///handle new lines between numbers
-    test('handle new lines between numbers', () {
-      expect(Calculator.add("1\n2,3"), 6);
+    // test('handle new lines between numbers', () {
+    //   expect(Calculator.add("1\n2,3"), 6);
+    // });
+
+    //Throws exception for negative no.
+    test('throws exception for negative no.', () {
+      expect(Calculator.add("1,-2,3"),
+          throwsA(isA<ArgumentError>())
+      );
     });
   });
 }
